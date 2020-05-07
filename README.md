@@ -2,7 +2,7 @@
 
 This library provides an interface for working with multiple makes and models of thermocyclers. The goal is to provide a consistent interface for instructions on how to use the thermocycler. For example, in a protocol `show` block,
 ```ruby
-note "Click the <b>Open Lid</b> button"
+note "Click the <b>Close Lid</b> button"
 image "Actions/TestThermocycler/close_lid.png" 
 ```
 becomes
