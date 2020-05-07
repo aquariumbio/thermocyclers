@@ -25,14 +25,14 @@ class BioRadCFX96 < AbstractThermocycler
       experiment_filepath: "Desktop/_qPCR_UWBIOFAB",
       export_filepath: "Desktop/BIOFAB qPCR Exports",
       image_path: "Actions/BioRad_qPCR_Thermocycler",
-      open_software: "open_biorad_thermo_workspace.JPG",
-      setup_workspace: "setup_workspace.JPG",
-      setup_program: "setting_up_qPCR_thermo_conditions.png",
-      setup_plate_layout: "setting_up_plate_layout_v1.png",
-      open_lid: "open_lid.png",
-      close_lid: "close_lid.png",
-      start_run: "start_run.png",
-      export_results: "exporting_qPCR_quantification.png"
+      open_software_image: "open_biorad_thermo_workspace.JPG",
+      setup_workspace_image: "setup_workspace.JPG",
+      setup_program_image: "setting_up_qPCR_thermo_conditions.png",
+      setup_plate_layout_image: "setting_up_plate_layout_v1.png",
+      open_lid_image: "open_lid.png",
+      close_lid_image: "close_lid.png",
+      start_run_image: "start_run.png",
+      export_results_image: "exporting_qPCR_quantification.png"
     }
   end
 end
