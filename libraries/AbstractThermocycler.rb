@@ -144,56 +144,56 @@ class AbstractThermocycler
   #
   # @return [String]
   def open_software_image()
-    image_path(image_name: params[:open_software])
+    image_path(image_name: params[:open_software_image])
   end
 
   # Image for setting up the software workspace
   #
   # @return [String]
   def setup_workspace_image()
-    image_path(image_name: params[:setup_workspace])
+    image_path(image_name: params[:setup_workspace_image])
   end
 
   # Image for selecting the PCR program template in the software
   #
   # @return [String]
   def setup_program_image()
-    image_path(image_name: params[:setup_program])
+    image_path(image_name: params[:setup_program_image])
   end
 
   # Image for selecting the plate layout template in the software
   #
   # @return [String]
   def setup_plate_layout_image()
-    image_path(image_name: params[:setup_plate_layout])
+    image_path(image_name: params[:setup_plate_layout_image])
   end
 
   # Image for opening the lid
   #
   # @return [String]
   def open_lid_image()
-    image_path(image_name: params[:open_lid])
+    image_path(image_name: params[:open_lid_image])
   end
 
   # Image for closing the lid
   #
   # @return [String]
   def close_lid_image()
-    image_path(image_name: params[:close_lid])
+    image_path(image_name: params[:close_lid_image])
   end
 
   # Image for starting the run
   #
   # @return [String]
   def start_run_image()
-    image_path(image_name: params[:start_run])
+    image_path(image_name: params[:start_run_image])
   end
 
   # Image for exporting measurements from a qPCR run
   #
   # @return [String]
   def export_results_image()
-    image_path(image_name: params[:export_results])
+    image_path(image_name: params[:export_results_image])
   end
 
   ########## Template File Methods
@@ -220,14 +220,14 @@ class AbstractThermocycler
       experiment_filepath: "",
       export_filepath: "",
       image_path: "",
-      open_software: "open_software.png",
-      setup_workspace: "setup_workspace.png",
-      setup_program: "setup_program.png",
-      setup_plate_layout: "setup_plate_layout.png",
-      open_lid: "open_lid.png",
-      close_lid: "close_lid.png",
-      start_run: "start_run.png",
-      export_results: "export_results.png"
+      open_software_image: "open_software.png",
+      setup_workspace_image: "setup_workspace.png",
+      setup_program_image: "setup_program.png",
+      setup_plate_layout_image: "setup_plate_layout.png",
+      open_lid_image: "open_lid.png",
+      close_lid_image: "close_lid.png",
+      start_run_image: "start_run.png",
+      export_results_image: "export_results.png"
     }
   end
 
