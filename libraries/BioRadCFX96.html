@@ -899,6 +899,11 @@ $(document).ready(function() {
   
   
   
+  <dl>
+      <dt>Includes:</dt>
+      <dd>QPCRMixIn</dd>
+  </dl>
+  
   
 
   
@@ -935,6 +940,11 @@ $(document).ready(function() {
         </dt>
         <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.pltd</span><span class='tstring_end'>&quot;</span></span></pre></dd>
       
+        <dt id="SOFTWARE_NAME-constant" class="">SOFTWARE_NAME =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CFX Manager Software</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
     </dl>
   
 
@@ -951,6 +961,78 @@ $(document).ready(function() {
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#close_lid-instance_method" title="#close_lid (instance method)">#<strong>close_lid</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Instructions for closing the lid.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#confirm_plate_orientation-instance_method" title="#confirm_plate_orientation (instance method)">#<strong>confirm_plate_orientation</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Instructions for confirming the orientation of a plate in the instrument.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#export_measurements-instance_method" title="#export_measurements (instance method)">#<strong>export_measurements</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Instructions for exporting measurements from a qPCR run.</p>
+</div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -973,6 +1055,222 @@ $(document).ready(function() {
   
     <span class="summary_desc"><div class='inline'>
 <p>Instantiates the class.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#open_lid-instance_method" title="#open_lid (instance method)">#<strong>open_lid</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Instructions for opening the lid.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#open_software-instance_method" title="#open_software (instance method)">#<strong>open_software</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Instructions for opening the software that controls the thermocycler.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#place_plate_in_instrument-instance_method" title="#place_plate_in_instrument (instance method)">#<strong>place_plate_in_instrument</strong>(plate:)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Instructions for placing a plate in the instrument.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#save_experiment_file-instance_method" title="#save_experiment_file (instance method)">#<strong>save_experiment_file</strong>(filename:)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Instructions for saving an experiment file.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#select_layout_template-instance_method" title="#select_layout_template (instance method)">#<strong>select_layout_template</strong>(program:)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Instructions for selecting the plate layout template in the software.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#select_program_template-instance_method" title="#select_program_template (instance method)">#<strong>select_program_template</strong>(program:)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Instructions for selecting the PCR program template in the software.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_dye-instance_method" title="#set_dye (instance method)">#<strong>set_dye</strong>(composition: nil, dye_name: nil)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Instructions for setting the dye channel on a qPCR thermocycler.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_run-instance_method" title="#start_run (instance method)">#<strong>start_run</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Instructions for starting the run.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#turn_on-instance_method" title="#turn_on (instance method)">#<strong>turn_on</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Instructions for turning on the thermocycler.</p>
 </div></span>
   
 </li>
@@ -1006,6 +1304,7 @@ $(document).ready(function() {
   
 
 
+  
   <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -1035,12 +1334,12 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-16
-17
-18</pre>
+19
+20
+21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='rparen'>)</span>
@@ -1058,7 +1357,773 @@ $(document).ready(function() {
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="user_defined_params-instance_method">
+  <h3 class="signature first" id="close_lid-instance_method">
+  
+    #<strong>close_lid</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Instructions for closing the lid</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+115
+116
+117</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 115</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_close_lid'>close_lid</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Click the &lt;b&gt;Close Lid&lt;/b&gt; button</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="confirm_plate_orientation-instance_method">
+  
+    #<strong>confirm_plate_orientation</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Instructions for confirming the orientation of a plate in the instrument</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+101
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 101</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_confirm_plate_orientation'>confirm_plate_orientation</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MAKE SURE THAT THE PLATE IS IN THE CORRECT ORIENTATION</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="export_measurements-instance_method">
+  
+    #<strong>export_measurements</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Instructions for exporting measurements from a qPCR run</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+137
+138
+139
+140
+141
+142</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 137</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_export_measurements'>export_measurements</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Click &lt;b&gt;Export&lt;/b&gt;&lt;br&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Select &lt;b&gt;Export All Data Sheets&lt;/b&gt;&lt;br&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Export all sheets as CSV&lt;br&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Save files to the </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:export_filepath</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> directory</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="open_lid-instance_method">
+  
+    #<strong>open_lid</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Instructions for opening the lid</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 108</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_open_lid'>open_lid</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Click the &lt;b&gt;Open Lid&lt;/b&gt; button</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="open_software-instance_method">
+  
+    #<strong>open_software</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Instructions for opening the software that controls the thermocycler</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 57</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_open_software'>open_software</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Open </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_software_name'>software_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="place_plate_in_instrument-instance_method">
+  
+    #<strong>place_plate_in_instrument</strong>(plate:)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Instructions for placing a plate in the instrument</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>plate</span>
+      
+      
+        <span class='type'>(<tt>Collection</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_place_plate_in_instrument'>place_plate_in_instrument</span><span class='lparen'>(</span><span class='label'>plate:</span><span class='rparen'>)</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Place plate </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_plate'>plate</span><span class='embexpr_end'>}</span><span class='tstring_content'> in the thermocycler</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="save_experiment_file-instance_method">
+  
+    #<strong>save_experiment_file</strong>(filename:)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Instructions for saving an experiment file</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>filename</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the name of the file (without the full path)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+130
+131
+132</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 130</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_save_experiment_file'>save_experiment_file</span><span class='lparen'>(</span><span class='label'>filename:</span><span class='rparen'>)</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Save the experiment as </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_filename'>filename</span><span class='embexpr_end'>}</span><span class='tstring_content'> in </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:experiment_filepath</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="select_layout_template-instance_method">
+  
+    #<strong>select_layout_template</strong>(program:)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Instructions for selecting the plate layout template in the software</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>program</span>
+      
+      
+        <span class='type'>(<tt>PCRProgram</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+85
+86
+87
+88</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 85</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_select_layout_template'>select_layout_template</span><span class='lparen'>(</span><span class='label'>program:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='id identifier rubyid_layout_template_file'>layout_template_file</span><span class='lparen'>(</span><span class='label'>program:</span> <span class='id identifier rubyid_program'>program</span><span class='rparen'>)</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Choose the layout template &lt;b&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/b&gt;</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="select_program_template-instance_method">
+  
+    #<strong>select_program_template</strong>(program:)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Instructions for selecting the PCR program template in the software</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>program</span>
+      
+      
+        <span class='type'>(<tt>PCRProgram</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78
+79</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 76</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_select_program_template'>select_program_template</span><span class='lparen'>(</span><span class='label'>program:</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='id identifier rubyid_program_template_file'>program_template_file</span><span class='lparen'>(</span><span class='label'>program:</span> <span class='id identifier rubyid_program'>program</span><span class='rparen'>)</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Choose the program template &lt;b&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file'>file</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/b&gt;</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_dye-instance_method">
+  
+    #<strong>set_dye</strong>(composition: nil, dye_name: nil)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note todo">
+    <strong>TODO:</strong>
+    <div class='inline'>
+<p>should be moved to MixIn</p>
+</div>
+  </div>
+
+
+<p>Instructions for setting the dye channel on a qPCR thermocycler</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>composition</span>
+      
+      
+        <span class='type'>(<tt>PCRComposition</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>dye_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>can be supplied instead of a `PCRComposition`</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+67
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 67</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_set_dye'>set_dye</span><span class='lparen'>(</span><span class='label'>composition:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>dye_name:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_dye_name'>dye_name</span> <span class='op'>=</span> <span class='id identifier rubyid_composition'>composition</span><span class='period'>.</span><span class='id identifier rubyid_dye'>dye</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='symbol'>:input_name</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_dye_name'>dye_name</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Click on the &lt;b&gt;PrimePCR&lt;/b&gt; and choose &lt;b&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dye_name'>dye_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/b&gt; as the dye</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start_run-instance_method">
+  
+    #<strong>start_run</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Instructions for starting the run</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+122
+123
+124</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 122</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start_run'>start_run</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Click the &lt;b&gt;Start Run&lt;/b&gt; button</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="turn_on-instance_method">
+  
+    #<strong>turn_on</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Instructions for turning on the thermocycler</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_turn_on'>turn_on</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>If the thermocycler is off, toggle the power switch in the back of the</span><span class='tstring_end'>&quot;</span></span> \
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> instrument</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="user_defined_params-instance_method">
   
     #<strong>user_defined_params</strong>  &#x21d2; <tt>Hash</tt> 
   
@@ -1096,9 +2161,6 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-23
-24
-25
 26
 27
 28
@@ -1110,10 +2172,13 @@ $(document).ready(function() {
 34
 35
 36
-37</pre>
+37
+38
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_user_defined_params'>user_defined_params</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='lbrace'>{</span>
