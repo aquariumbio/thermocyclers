@@ -59,8 +59,26 @@ var config = {
             },
           
             {
+              name: 'MiniPCRMini16',
+              path: 'libraries/MiniPCRMini16' + '.html',
+              type: "local-webpage"
+            },
+          
+            {
+              name: 'QPCRThermocyclerTemplate',
+              path: 'libraries/QPCRThermocyclerTemplate' + '.html',
+              type: "local-webpage"
+            },
+          
+            {
               name: 'TestThermocycler',
               path: 'libraries/TestThermocycler' + '.html',
+              type: "local-webpage"
+            },
+          
+            {
+              name: 'ThermocyclerTemplate',
+              path: 'libraries/ThermocyclerTemplate' + '.html',
               type: "local-webpage"
             },
           
