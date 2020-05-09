@@ -27,10 +27,10 @@ class Protocol
   def main
 
     composition = PCRCompositionFactory.build(
-      program_name: "CDC_TaqPath_CG"
+      program_name: "qPCR1"
     )
     program = PCRProgramFactory.build(
-      program_name: "CDC_TaqPath_CG", 
+      program_name: "qPCR1", 
       volume: composition.volume
     )
 
@@ -44,32 +44,34 @@ class Protocol
     end
     
     thermocycler = ThermocyclerFactory.build(
-      model: TestThermocycler::MODEL
+      model: MiniPCRMini16::MODEL
     )
 
-    show do 
-      title 'Thermocycler Test'
+    if thermocycler.respond_to?(:set_dye)
+      show do 
+        title 'Thermocycler Test'
 
-      note 'Template files:'
-      note thermocycler.program_template_file(program: program)
-      note thermocycler.layout_template_file(program: program)
+        note 'Template files:'
+        note thermocycler.program_template_file(program: program)
+        note thermocycler.layout_template_file(program: program)
 
-      note 'Test image path:'
-      note thermocycler.open_software_image
+        note 'Test image path:'
+        note thermocycler.open_software_image
+      end
+
+      set_up_program(
+        thermocycler: thermocycler, 
+        program: program, 
+        composition: composition
+      )
+
+      export_measurements(thermocycler: thermocycler)
     end
-
-    set_up_program(
-      thermocycler: thermocycler, 
-      program: program, 
-      composition: composition
-    )
 
     load_plate_and_start_run(
       thermocycler: thermocycler, 
       filename: 'test_filename'
     )
-
-    export_measurements(thermocycler: thermocycler)
 
     {}
 
