@@ -4,6 +4,7 @@
 
 needs "Thermocyclers/TestThermocycler"
 needs "Thermocyclers/BioRadCFX96"
+needs "Thermocyclers/MiniPCRMini16"
 
 # Helper module for standard thermocycler procedures
 #
@@ -26,7 +27,6 @@ module ThermocyclerHelper
       image thermocycler.open_software_image
       separator
 
-      # TODO: What happens if this is not a qPCR experiment?
       note thermocycler.set_dye(composition: composition)
       image thermocycler.setup_workspace_image
       separator
@@ -35,7 +35,6 @@ module ThermocyclerHelper
       image thermocycler.setup_program_image
       separator
 
-      # TODO: What happens if this is not a qPCR experiment?
       note thermocycler.select_layout_template(program: program)
       image thermocycler.setup_plate_layout_image
     end
@@ -63,7 +62,7 @@ module ThermocyclerHelper
         note thermocycler.place_plate_in_instrument(plate: items.first)
         warning thermocycler.confirm_plate_orientation
       else
-        note 'Place samples in thermocycler'
+        note 'Load the PCR tubes into the metal block'
       end
       separator
 
@@ -72,9 +71,9 @@ module ThermocyclerHelper
       separator
 
       note thermocycler.start_run
-      # TODO: What happens if this is not a qPCR experiment?
-      note thermocycler.save_experiment_file(filename: filename) if filename.present?
-      image thermocycler.start_run_image
+      if filename.present? && thermocycler.respond_to?(:save_experiment_file)
+        note thermocycler.save_experiment_file(filename: filename)
+      end
     end
   end
 
@@ -130,6 +129,8 @@ class ThermocyclerFactory
       TestThermocycler.new()
     when BioRadCFX96::MODEL
       BioRadCFX96.new()
+    when MiniPCRMini16::MODEL
+      MiniPCRMini16.new()
     else
       msg = "Unrecognized Thermocycler Model: #{model}"
       raise ThermocyclerInputError.new(msg)
