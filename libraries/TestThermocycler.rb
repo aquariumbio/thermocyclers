@@ -2,10 +2,13 @@ needs 'Thermocyclers/AbstractThermocycler'
 
 class TestThermocycler < AbstractThermocycler
 
+  include QPCRMixIn
+
   # CONSTANTS that really shouldn't ever change
   MODEL = "Test Model"
   PROGRAM_EXT = ".abc"
   LAYOUT_EXT =  "xyz" # Intentionally missing leading dot for test
+  SOFTWARE_NAME = "Test Software"
 
   # Instantiates the class
   #
