@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 # Library for handling thermocyclers, including qPCR thermocyclers
 #
 # @author Devin Strickland <strcklnd@uw.edu>
 
-needs "Thermocyclers/TestThermocycler"
-needs "Thermocyclers/BioRadCFX96"
-needs "Thermocyclers/MiniPCRMini16"
+needs 'Thermocyclers/TestThermocycler'
+needs 'Thermocyclers/BioRadCFX96'
+needs 'Thermocyclers/MiniPCRMini16'
 
 # Helper module for standard thermocycler procedures
 #
@@ -13,7 +15,6 @@ needs "Thermocyclers/MiniPCRMini16"
 # @note methods originally deployed as `QPCR_ThermocyclerLib`
 #   on UW BIOFAB production 10/05/18
 module ThermocyclerHelper
-
   # Steps for setting up a proram in a thermocycler
   #
   # @param thermocycler [Thermocycler]
@@ -44,21 +45,20 @@ module ThermocyclerHelper
   #
   # @param thermocycler [Thermocycler]
   # @param items [Item, Array<Item>]
-  # @param filename [String] the filename to safe the experiment file 
+  # @param filename [String] the filename to safe the experiment file
   def load_plate_and_start_run(thermocycler:, items: [], filename: nil)
-
     # Normalize the presentation of `items`
     items = [items] if items.respond_to?(:collection?)
 
     show do
       title "Start Run on #{thermocycler.model} Thermocycler"
-      
+
       note thermocycler.open_lid
       image thermocycler.open_lid_image
       separator
 
       # TODO: Make this work for plates, stripwells, and individual tubes
-      if items.length == 1 && is_96well_plate?(items.first)
+      if single_96well_plate?(items)
         note thermocycler.place_plate_in_instrument(plate: items.first)
         warning thermocycler.confirm_plate_orientation
       else
@@ -82,10 +82,10 @@ module ThermocyclerHelper
   # @param thermocycler [Thermocycler]
   def export_measurements(thermocycler:)
     show do
-      title "Export Measurements"
-      
-      note "Once the run has finished, export the measurements"
-      note thermocycler.export_measurements()
+      title 'Export Measurements'
+
+      note 'Once the run has finished, export the measurements'
+      note thermocycler.export_measurements
       image thermocycler.export_results_image
     end
   end
@@ -104,6 +104,14 @@ module ThermocyclerHelper
 
   private
 
+  # Test whether an array of items is a single 96 well plate
+  #
+  # @param items [Array<Item>]
+  # @return [Boolean]
+  def single_96well_plate?(items)
+    items.length == 1 && is_96well_plate?(items.first)
+  end
+
   # Test whether an item is a 96 well plate
   #
   # @param item [Item]
@@ -117,23 +125,22 @@ end
 #
 # @author Devin Strickland <strcklnd@uw.edu>
 class ThermocyclerFactory
-
   # Instantiates a new `Thermocycler`
   #
-  # @param model [String] the `MODEL` of the thermocycler. Must match the 
+  # @param model [String] the `MODEL` of the thermocycler. Must match the
   #   constant `MODEL` in an exisiting thermocycler class.
   # @return [Thermocycler]
   def self.build(model:)
     case model
     when TestThermocycler::MODEL
-      TestThermocycler.new()
+      TestThermocycler.new
     when BioRadCFX96::MODEL
-      BioRadCFX96.new()
+      BioRadCFX96.new
     when MiniPCRMini16::MODEL
-      MiniPCRMini16.new()
+      MiniPCRMini16.new
     else
       msg = "Unrecognized Thermocycler Model: #{model}"
-      raise ThermocyclerInputError.new(msg)
+      raise ThermocyclerInputError, msg
     end
   end
 end
