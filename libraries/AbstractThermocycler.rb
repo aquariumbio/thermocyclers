@@ -1,10 +1,14 @@
-class AbstractThermocycler
+# frozen_string_literal: true
 
+# Abstract PCR thermocycler
+#
+# @author Devin Strickland <strcklnd@uw.edu>
+class AbstractThermocycler
   # CONSTANTS that really shouldn't ever change
   # Should be overriden in concrete class
-  MODEL = ""
-  PROGRAM_EXT = ""
-  
+  MODEL = ''
+  PROGRAM_EXT = ''
+
   private_constant :MODEL, :PROGRAM_EXT
 
   attr_reader :params
@@ -12,7 +16,7 @@ class AbstractThermocycler
   # Instantiates the class and sets the `@params` insteance variable
   #
   # @return [Thermocycler]
-  def initialize()
+  def initialize
     @params = default_params.update(user_defined_params)
   end
 
@@ -20,7 +24,7 @@ class AbstractThermocycler
   #
   # @note Should be overriden in concrete class
   # @return [Hash]
-  def user_defined_params()
+  def user_defined_params
     {}
   end
 
@@ -31,7 +35,7 @@ class AbstractThermocycler
   # Instructions for turning on the thermocycler
   #
   # @return [String]
-  def turn_on()
+  def turn_on
     "Turn on the #{model}"
   end
 
@@ -46,8 +50,8 @@ class AbstractThermocycler
   # Instructions for confirming the orientation of a plate in the instrument
   #
   # @return [String]
-  def confirm_plate_orientation()
-    "MAKE SURE THAT THE PLATE IS IN THE CORRECT ORIENTATION"
+  def confirm_plate_orientation
+    'MAKE SURE THAT THE PLATE IS IN THE CORRECT ORIENTATION'
   end
 
   # Instructions for selecting the PCR program template
@@ -62,22 +66,22 @@ class AbstractThermocycler
   # Instructions for opening the lid
   #
   # @return [String]
-  def open_lid()
-    "Click the <b>Open Lid</b> button"
+  def open_lid
+    'Click the <b>Open Lid</b> button'
   end
 
   # Instructions for closing the lid
   #
   # @return [String]
-  def close_lid()
-    "Click the <b>Close Lid</b> button"
+  def close_lid
+    'Click the <b>Close Lid</b> button'
   end
 
   # Instructions for starting the run
   #
   # @return [String]
-  def start_run()
-    "Click the <b>Start Run</b> button"
+  def start_run
+    'Click the <b>Start Run</b> button'
   end
 
   ########## Image Methods
@@ -86,21 +90,21 @@ class AbstractThermocycler
   # Image for opening the lid
   #
   # @return [String]
-  def open_lid_image()
+  def open_lid_image
     image_path(image_name: params[:open_lid_image])
   end
 
   # Image for closing the lid
   #
   # @return [String]
-  def close_lid_image()
+  def close_lid_image
     image_path(image_name: params[:close_lid_image])
   end
 
   # Image for starting the run
   #
   # @return [String]
-  def start_run_image()
+  def start_run_image
     image_path(image_name: params[:start_run_image])
   end
 
@@ -109,7 +113,7 @@ class AbstractThermocycler
 
   def program_template_file(program:)
     template_file(
-      template_name: program.program_template_name, 
+      template_name: program.program_template_name,
       extension: :PROGRAM_EXT
     )
   end
@@ -120,25 +124,25 @@ class AbstractThermocycler
   # The model of the thermocycler
   #
   # @return [String]
-  def model()
+  def model
     self.class.const_get(:MODEL)
   end
 
   private
 
-  def default_params()
+  def default_params
     {
-      experiment_filepath: "",
-      export_filepath: "",
-      image_path: "",
-      open_software_image: "open_software.png",
-      setup_workspace_image: "setup_workspace.png",
-      setup_program_image: "setup_program.png",
-      setup_plate_layout_image: "setup_plate_layout.png",
-      open_lid_image: "open_lid.png",
-      close_lid_image: "close_lid.png",
-      start_run_image: "start_run.png",
-      export_results_image: "export_results.png"
+      experiment_filepath: '',
+      export_filepath: '',
+      image_path: '',
+      open_software_image: 'open_software.png',
+      setup_workspace_image: 'setup_workspace.png',
+      setup_program_image: 'setup_program.png',
+      setup_plate_layout_image: 'setup_plate_layout.png',
+      open_lid_image: 'open_lid.png',
+      close_lid_image: 'close_lid.png',
+      start_run_image: 'start_run.png',
+      export_results_image: 'export_results.png'
     }
   end
 
@@ -158,16 +162,17 @@ class AbstractThermocycler
   def format_show_array(ary)
     ary.join('<br>')
   end
-
 end
 
+# Module that provides qPCR-specific methods for thermocyclers
+#
+# @author Devin Strickland <strcklnd@uw.edu>
 module QPCRMixIn
-
   # CONSTANTS that really shouldn't ever change
   # Should be overriden in concrete class
-  LAYOUT_EXT =  ""
-  SOFTWARE_NAME = "thermocycler software"
-  
+  LAYOUT_EXT =  ''
+  SOFTWARE_NAME = 'thermocycler software'
+
   private_constant :LAYOUT_EXT, :SOFTWARE_NAME
 
   ########## Language Methods
@@ -177,7 +182,7 @@ module QPCRMixIn
   # Instructions for opening the software that controls the thermocycler
   #
   # @return [String]
-  def open_software()
+  def open_software
     "Open #{software_name}"
   end
 
@@ -186,7 +191,6 @@ module QPCRMixIn
   # @param composition [PCRComposition]
   # @param dye_name [String] can be supplied instead of a `PCRComposition`
   # @return [String]
-  # @todo should be moved to MixIn
   def set_dye(composition: nil, dye_name: nil)
     dye_name = composition.dye.try(:input_name) || dye_name
     "Choose <b>#{dye_name}</b> as the dye"
@@ -212,11 +216,11 @@ module QPCRMixIn
   # Instructions for exporting measurements from a qPCR run
   #
   # @return [String]
-  def export_measurements()
-    "Click <b>Export</b><br>" +
-    "Select <b>Export All Data Sheets</b><br>" +
-    "Export all sheets as CSV<br>" +
-    "Save files to the #{params[:export_filepath]} directory"
+  def export_measurements
+    'Click <b>Export</b><br>' \
+      'Select <b>Export All Data Sheets</b><br>' \
+      'Export all sheets as CSV<br>' \
+      "Save files to the #{params[:export_filepath]} directory"
   end
 
   ########## Image Methods
@@ -225,35 +229,35 @@ module QPCRMixIn
   # Image for launching the software that controls the thermocycler
   #
   # @return [String]
-  def open_software_image()
+  def open_software_image
     image_path(image_name: params[:open_software_image])
   end
 
   # Image for setting up the software workspace
   #
   # @return [String]
-  def setup_workspace_image()
+  def setup_workspace_image
     image_path(image_name: params[:setup_workspace_image])
   end
 
   # Image for selecting the PCR program template in the software
   #
   # @return [String]
-  def setup_program_image()
+  def setup_program_image
     image_path(image_name: params[:setup_program_image])
   end
 
   # Image for selecting the plate layout template in the software
   #
   # @return [String]
-  def setup_plate_layout_image()
+  def setup_plate_layout_image
     image_path(image_name: params[:setup_plate_layout_image])
   end
 
   # Image for exporting measurements from a qPCR run
   #
   # @return [String]
-  def export_results_image()
+  def export_results_image
     image_path(image_name: params[:export_results_image])
   end
 
@@ -262,7 +266,7 @@ module QPCRMixIn
 
   def layout_template_file(program:)
     template_file(
-      template_name: program.layout_template_name, 
+      template_name: program.layout_template_name,
       extension: :LAYOUT_EXT
     )
   end
@@ -273,8 +277,7 @@ module QPCRMixIn
   # The name of the software that controls the thermocycler
   #
   # @return [String]
-  def software_name()
+  def software_name
     self.class.const_get(:SOFTWARE_NAME)
   end
-
 end
