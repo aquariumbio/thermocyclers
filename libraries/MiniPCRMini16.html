@@ -911,7 +911,42 @@ $(document).ready(function() {
   
 </div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note todo">
+    <strong>TODO:</strong>
+    <div class='inline'>
+<p>This is a complicated class because it is a software driven thermocycler that can be run on a variety of desktop or mobile platforms.</p>
+</div>
+  </div>
 
+
+<p>miniPCR mini16 minipcrbio.com</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Devin Strickland &lt;strcklnd@uw.edu&gt;</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
   
     <h2>
       Constant Summary
@@ -934,7 +969,7 @@ $(document).ready(function() {
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>miniPCR mini16</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>miniPCR mini16</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
     </dl>
   
@@ -1211,7 +1246,7 @@ $(document).ready(function() {
     <td>
       <pre class="code"><span class="info file"># File 'MiniPCRMini16.rb', line 19</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1277,7 +1312,7 @@ $(document).ready(function() {
     <td>
       <pre class="code"><span class="info file"># File 'MiniPCRMini16.rb', line 85</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_close_lid'>close_lid</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_close_lid'>close_lid</span>
   <span class='id identifier rubyid_format_show_array'>format_show_array</span><span class='lparen'>(</span><span class='lbracket'>[</span>
     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Fully untwist (counterclockwise) the adjustment knob</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Press the lid down until it clicks shut</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
@@ -1336,8 +1371,8 @@ $(document).ready(function() {
     <td>
       <pre class="code"><span class="info file"># File 'MiniPCRMini16.rb', line 59</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_confirm_plate_orientation'>confirm_plate_orientation</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_confirm_plate_orientation'>confirm_plate_orientation</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1393,7 +1428,7 @@ $(document).ready(function() {
     <td>
       <pre class="code"><span class="info file"># File 'MiniPCRMini16.rb', line 75</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_open_lid'>open_lid</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_open_lid'>open_lid</span>
   <span class='id identifier rubyid_format_show_array'>format_show_array</span><span class='lparen'>(</span><span class='lbracket'>[</span>
     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Open the lid by pinching the side tabs on the front plate of the miniPCR</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Use your thumb and index fingers to pinch, and lift the lid with your other hand</span><span class='tstring_end'>&#39;</span></span>
@@ -1593,7 +1628,7 @@ $(document).ready(function() {
     <td>
       <pre class="code"><span class="info file"># File 'MiniPCRMini16.rb', line 97</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_start_run'>start_run</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_start_run'>start_run</span>
   <span class='id identifier rubyid_format_show_array'>format_show_array</span><span class='lparen'>(</span><span class='lbracket'>[</span>
     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Click the &lt;b&gt;Run&lt;/b&gt; button</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The run will automatically begin, signaled by the green LED turning on</span><span class='tstring_end'>&#39;</span></span>
@@ -1653,7 +1688,7 @@ $(document).ready(function() {
     <td>
       <pre class="code"><span class="info file"># File 'MiniPCRMini16.rb', line 41</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_turn_on'>turn_on</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_turn_on'>turn_on</span>
   <span class='id identifier rubyid_format_show_array'>format_show_array</span><span class='lparen'>(</span><span class='lbracket'>[</span>
     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Connect the miniPCR thermal cycler via USB cable or Bluetooth</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
     <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Turn on the </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#MODEL-constant" title="MiniPCRMini16::MODEL (constant)">MODEL</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'> using the on/off switch on the back of the unit</span><span class='tstring_end'>&quot;</span></span>
@@ -1714,11 +1749,11 @@ $(document).ready(function() {
     <td>
       <pre class="code"><span class="info file"># File 'MiniPCRMini16.rb', line 26</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_user_defined_params'>user_defined_params</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_user_defined_params'>user_defined_params</span>
   <span class='lbrace'>{</span>
-    <span class='label'>experiment_filepath:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Desktop/my_experiment_path</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>export_filepath:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Desktop/my_export_path</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>image_path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Actions/MiniPCRMini16</span><span class='tstring_end'>&quot;</span></span>
+    <span class='label'>experiment_filepath:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Desktop/my_experiment_path</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='label'>export_filepath:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Desktop/my_export_path</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='label'>image_path:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Actions/MiniPCRMini16</span><span class='tstring_end'>&#39;</span></span>
   <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
