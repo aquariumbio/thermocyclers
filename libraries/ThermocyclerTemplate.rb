@@ -1,37 +1,37 @@
-# Template for making new thermocycler classes
-#   If you intend to make a ne qPCR thermocycler class, 
-#   use `QPCRThermocyclerTemplate`
-#
-# @author Devin Strickland <strcklnd@uw.edu>
+# frozen_string_literal: true
 
 needs 'Thermocyclers/AbstractThermocycler'
 
+# Template for making new thermocycler classes
+#   If you intend to make a new qPCR thermocycler class,
+#   use `QPCRThermocyclerTemplate`
+#
+# @author Devin Strickland <strcklnd@uw.edu>
 class ThermocyclerTemplate < AbstractThermocycler
-
   # CONSTANTS that really shouldn't ever change
-  MODEL = ""
+  MODEL = ''
 
   # Instantiates the class
   #
   # @return [ThermocyclerTemplate]
-  def initialize()
+  def initialize
     super()
   end
 
   # Lab-specific, user-defined parameters
   #
   # @return [Hash]
-  def user_defined_params()
+  def user_defined_params
     {
-      experiment_filepath: "Desktop/my_experiment_path",
-      export_filepath: "Desktop/my_export_path",
-      image_path: "Actions/ThermocyclerTemplate"
+      experiment_filepath: 'Desktop/my_experiment_path',
+      export_filepath: 'Desktop/my_export_path',
+      image_path: 'Actions/ThermocyclerTemplate'
     }
   end
 
   ########## Language Methods
   # These methods are not very specific and will probably need to be overridden
-  #   in the concrete classes. 
+  #   in the concrete classes.
 
   # # Instructions for turning on the thermocycler
   # #
@@ -75,5 +75,4 @@ class ThermocyclerTemplate < AbstractThermocycler
   # def start_run()
   #   "Click the <b>Start Run</b> button"
   # end
-
 end
