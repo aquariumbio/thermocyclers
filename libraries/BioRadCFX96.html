@@ -916,7 +916,54 @@ $(document).ready(function() {
   
 </div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>BioRad module originally deployed as `QPCR_ThermocyclerLib` on UW BIOFAB production 10/05/18</p>
+</div>
+  </div>
 
+
+<p>Class for handling BioRad CFX96 qPCR thermocycler</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Devin Strickland &lt;strcklnd@uw.edu&gt;</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Eriberto Lopez &lt;elopez3@uw.edu&gt;</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
   
     <h2>
       Constant Summary
@@ -928,22 +975,22 @@ $(document).ready(function() {
         <dt id="MODEL-constant" class="">MODEL =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BioRad CFX96</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BioRad CFX96</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
         <dt id="PROGRAM_EXT-constant" class="">PROGRAM_EXT =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.prcl</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>.prcl</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
         <dt id="LAYOUT_EXT-constant" class="">LAYOUT_EXT =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.pltd</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>.pltd</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
         <dt id="SOFTWARE_NAME-constant" class="">SOFTWARE_NAME =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CFX Manager Software</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CFX Manager Software</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
     </dl>
   
@@ -1334,14 +1381,14 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-19
-20
-21</pre>
+22
+23
+24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 22</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1395,15 +1442,15 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-115
-116
-117</pre>
+118
+119
+120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 115</span>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 118</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_close_lid'>close_lid</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Click the &lt;b&gt;Close Lid&lt;/b&gt; button</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_close_lid'>close_lid</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Click the &lt;b&gt;Close Lid&lt;/b&gt; button</span><span class='tstring_end'>&#39;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1449,15 +1496,15 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-101
-102
-103</pre>
+104
+105
+106</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 101</span>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 104</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_confirm_plate_orientation'>confirm_plate_orientation</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MAKE SURE THAT THE PLATE IS IN THE CORRECT ORIENTATION</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_confirm_plate_orientation'>confirm_plate_orientation</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MAKE SURE THAT THE PLATE IS IN THE CORRECT ORIENTATION</span><span class='tstring_end'>&#39;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1503,21 +1550,21 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-137
-138
-139
 140
 141
-142</pre>
+142
+143
+144
+145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 137</span>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 140</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_export_measurements'>export_measurements</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Click &lt;b&gt;Export&lt;/b&gt;&lt;br&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Select &lt;b&gt;Export All Data Sheets&lt;/b&gt;&lt;br&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Export all sheets as CSV&lt;br&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Save files to the </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:export_filepath</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> directory</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_export_measurements'>export_measurements</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Click &lt;b&gt;Export&lt;/b&gt;&lt;br&gt;</span><span class='tstring_end'>&#39;</span></span> \
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Select &lt;b&gt;Export All Data Sheets&lt;/b&gt;&lt;br&gt;</span><span class='tstring_end'>&#39;</span></span> \
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Export all sheets as CSV&lt;br&gt;</span><span class='tstring_end'>&#39;</span></span> \
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Save files to the </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:export_filepath</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> directory</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1563,15 +1610,15 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-108
-109
-110</pre>
+111
+112
+113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 111</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_open_lid'>open_lid</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Click the &lt;b&gt;Open Lid&lt;/b&gt; button</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_open_lid'>open_lid</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Click the &lt;b&gt;Open Lid&lt;/b&gt; button</span><span class='tstring_end'>&#39;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1617,14 +1664,14 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-57
-58
-59</pre>
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 60</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_open_software'>open_software</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_open_software'>open_software</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Open </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_software_name'>software_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1686,12 +1733,12 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-94
-95
-96</pre>
+97
+98
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 94</span>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_place_plate_in_instrument'>place_plate_in_instrument</span><span class='lparen'>(</span><span class='label'>plate:</span><span class='rparen'>)</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Place plate </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_plate'>plate</span><span class='embexpr_end'>}</span><span class='tstring_content'> in the thermocycler</span><span class='tstring_end'>&quot;</span></span>
@@ -1760,12 +1807,12 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-130
-131
-132</pre>
+133
+134
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 130</span>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_save_experiment_file'>save_experiment_file</span><span class='lparen'>(</span><span class='label'>filename:</span><span class='rparen'>)</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Save the experiment as </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_filename'>filename</span><span class='embexpr_end'>}</span><span class='tstring_content'> in </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:experiment_filepath</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1829,13 +1876,13 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-85
-86
-87
-88</pre>
+88
+89
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 88</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_select_layout_template'>select_layout_template</span><span class='lparen'>(</span><span class='label'>program:</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='id identifier rubyid_layout_template_file'>layout_template_file</span><span class='lparen'>(</span><span class='label'>program:</span> <span class='id identifier rubyid_program'>program</span><span class='rparen'>)</span>
@@ -1900,13 +1947,13 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-76
-77
-78
-79</pre>
+79
+80
+81
+82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_select_program_template'>select_program_template</span><span class='lparen'>(</span><span class='label'>program:</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='id identifier rubyid_program_template_file'>program_template_file</span><span class='lparen'>(</span><span class='label'>program:</span> <span class='id identifier rubyid_program'>program</span><span class='rparen'>)</span>
@@ -1995,13 +2042,13 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-67
-68
-69
-70</pre>
+70
+71
+72
+73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_dye'>set_dye</span><span class='lparen'>(</span><span class='label'>composition:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>dye_name:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_dye_name'>dye_name</span> <span class='op'>=</span> <span class='id identifier rubyid_composition'>composition</span><span class='period'>.</span><span class='id identifier rubyid_dye'>dye</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='symbol'>:input_name</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_dye_name'>dye_name</span>
@@ -2051,15 +2098,15 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-122
-123
-124</pre>
+125
+126
+127</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 122</span>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 125</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_start_run'>start_run</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Click the &lt;b&gt;Start Run&lt;/b&gt; button</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_start_run'>start_run</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Click the &lt;b&gt;Start Run&lt;/b&gt; button</span><span class='tstring_end'>&#39;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2105,17 +2152,17 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-49
-50
-51
-52</pre>
+52
+53
+54
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 49</span>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 52</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_turn_on'>turn_on</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>If the thermocycler is off, toggle the power switch in the back of the</span><span class='tstring_end'>&quot;</span></span> \
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> instrument</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_turn_on'>turn_on</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>If the thermocycler is off, toggle the power switch in the back of the</span><span class='tstring_end'>&#39;</span></span> \
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> instrument</span><span class='tstring_end'>&#39;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2161,9 +2208,6 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-26
-27
-28
 29
 30
 31
@@ -2175,24 +2219,27 @@ $(document).ready(function() {
 37
 38
 39
-40</pre>
+40
+41
+42
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'BioRadCFX96.rb', line 29</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_user_defined_params'>user_defined_params</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_user_defined_params'>user_defined_params</span>
   <span class='lbrace'>{</span>
-    <span class='label'>experiment_filepath:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Desktop/_qPCR_UWBIOFAB</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>export_filepath:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Desktop/BIOFAB qPCR Exports</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>image_path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Actions/BioRad_qPCR_Thermocycler</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>open_software_image:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>open_biorad_thermo_workspace.JPG</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>setup_workspace_image:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>setup_workspace.JPG</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>setup_program_image:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>setting_up_qPCR_thermo_conditions.png</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>setup_plate_layout_image:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>setting_up_plate_layout_v1.png</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>open_lid_image:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>open_lid.png</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>close_lid_image:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>close_lid.png</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>start_run_image:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>start_run.png</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>export_results_image:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>exporting_qPCR_quantification.png</span><span class='tstring_end'>&quot;</span></span>
+    <span class='label'>experiment_filepath:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Desktop/_qPCR_UWBIOFAB</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='label'>export_filepath:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Desktop/BIOFAB qPCR Exports</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='label'>image_path:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Actions/BioRad_qPCR_Thermocycler</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='label'>open_software_image:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>open_biorad_thermo_workspace.JPG</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='label'>setup_workspace_image:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>setup_workspace.JPG</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='label'>setup_program_image:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>setting_up_qPCR_thermo_conditions.png</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='label'>setup_plate_layout_image:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>setting_up_plate_layout_v1.png</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='label'>open_lid_image:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>open_lid.png</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='label'>close_lid_image:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>close_lid.png</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='label'>start_run_image:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>start_run.png</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='label'>export_results_image:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>exporting_qPCR_quantification.png</span><span class='tstring_end'>&#39;</span></span>
   <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
