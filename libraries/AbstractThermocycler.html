@@ -895,7 +895,34 @@ $(document).ready(function() {
   
 </div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Module that provides qPCR-specific methods for thermocyclers</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Devin Strickland &lt;strcklnd@uw.edu&gt;</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 
 
 
@@ -1246,21 +1273,21 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-215
-216
-217
-218
 219
-220</pre>
+220
+221
+222
+223
+224</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 215</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 219</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_export_measurements'>export_measurements</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Click &lt;b&gt;Export&lt;/b&gt;&lt;br&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Select &lt;b&gt;Export All Data Sheets&lt;/b&gt;&lt;br&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Export all sheets as CSV&lt;br&gt;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Save files to the </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:export_filepath</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> directory</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_export_measurements'>export_measurements</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Click &lt;b&gt;Export&lt;/b&gt;&lt;br&gt;</span><span class='tstring_end'>&#39;</span></span> \
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Select &lt;b&gt;Export All Data Sheets&lt;/b&gt;&lt;br&gt;</span><span class='tstring_end'>&#39;</span></span> \
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Export all sheets as CSV&lt;br&gt;</span><span class='tstring_end'>&#39;</span></span> \
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Save files to the </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:export_filepath</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> directory</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1306,14 +1333,14 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-256
-257
-258</pre>
+260
+261
+262</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 256</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 260</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_export_results_image'>export_results_image</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_export_results_image'>export_results_image</span>
   <span class='id identifier rubyid_image_path'>image_path</span><span class='lparen'>(</span><span class='label'>image_name:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:export_results_image</span><span class='rbracket'>]</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1347,19 +1374,19 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-263
-264
-265
-266
 267
-268</pre>
+268
+269
+270
+271
+272</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 263</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 267</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_layout_template_file'>layout_template_file</span><span class='lparen'>(</span><span class='label'>program:</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_template_file'>template_file</span><span class='lparen'>(</span>
-    <span class='label'>template_name:</span> <span class='id identifier rubyid_program'>program</span><span class='period'>.</span><span class='id identifier rubyid_layout_template_name'>layout_template_name</span><span class='comma'>,</span> 
+    <span class='label'>template_name:</span> <span class='id identifier rubyid_program'>program</span><span class='period'>.</span><span class='id identifier rubyid_layout_template_name'>layout_template_name</span><span class='comma'>,</span>
     <span class='label'>extension:</span> <span class='symbol'>:LAYOUT_EXT</span>
   <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -1407,14 +1434,14 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-180
-181
-182</pre>
+185
+186
+187</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 180</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 185</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_open_software'>open_software</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_open_software'>open_software</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Open </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_software_name'>software_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1461,14 +1488,14 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-228
-229
-230</pre>
+232
+233
+234</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 228</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 232</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_open_software_image'>open_software_image</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_open_software_image'>open_software_image</span>
   <span class='id identifier rubyid_image_path'>image_path</span><span class='lparen'>(</span><span class='label'>image_name:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:open_software_image</span><span class='rbracket'>]</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1535,12 +1562,12 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-208
-209
-210</pre>
+212
+213
+214</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 208</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 212</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_save_experiment_file'>save_experiment_file</span><span class='lparen'>(</span><span class='label'>filename:</span><span class='rparen'>)</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Save the experiment as </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_filename'>filename</span><span class='embexpr_end'>}</span><span class='tstring_content'> in </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:experiment_filepath</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1604,13 +1631,13 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-199
-200
-201
-202</pre>
+203
+204
+205
+206</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 199</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 203</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_select_layout_template'>select_layout_template</span><span class='lparen'>(</span><span class='label'>program:</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='id identifier rubyid_layout_template_file'>layout_template_file</span><span class='lparen'>(</span><span class='label'>program:</span> <span class='id identifier rubyid_program'>program</span><span class='rparen'>)</span>
@@ -1633,14 +1660,6 @@ $(document).ready(function() {
 </h3><div class="docstring">
   <div class="discussion">
     
-  <div class="note todo">
-    <strong>TODO:</strong>
-    <div class='inline'>
-<p>should be moved to MixIn</p>
-</div>
-  </div>
-
-
 <p>Instructions for setting the dye channel on a qPCR thermocycler</p>
 
 
@@ -1699,13 +1718,13 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-190
-191
-192
-193</pre>
+194
+195
+196
+197</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 190</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 194</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_dye'>set_dye</span><span class='lparen'>(</span><span class='label'>composition:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>dye_name:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_dye_name'>dye_name</span> <span class='op'>=</span> <span class='id identifier rubyid_composition'>composition</span><span class='period'>.</span><span class='id identifier rubyid_dye'>dye</span><span class='period'>.</span><span class='id identifier rubyid_try'>try</span><span class='lparen'>(</span><span class='symbol'>:input_name</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_dye_name'>dye_name</span>
@@ -1755,14 +1774,14 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-249
-250
-251</pre>
+253
+254
+255</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 249</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 253</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_setup_plate_layout_image'>setup_plate_layout_image</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_setup_plate_layout_image'>setup_plate_layout_image</span>
   <span class='id identifier rubyid_image_path'>image_path</span><span class='lparen'>(</span><span class='label'>image_name:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:setup_plate_layout_image</span><span class='rbracket'>]</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1809,14 +1828,14 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-242
-243
-244</pre>
+246
+247
+248</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 242</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 246</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_setup_program_image'>setup_program_image</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_setup_program_image'>setup_program_image</span>
   <span class='id identifier rubyid_image_path'>image_path</span><span class='lparen'>(</span><span class='label'>image_name:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:setup_program_image</span><span class='rbracket'>]</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1863,14 +1882,14 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-235
-236
-237</pre>
+239
+240
+241</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 235</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 239</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_setup_workspace_image'>setup_workspace_image</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_setup_workspace_image'>setup_workspace_image</span>
   <span class='id identifier rubyid_image_path'>image_path</span><span class='lparen'>(</span><span class='label'>image_name:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:setup_workspace_image</span><span class='rbracket'>]</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1917,14 +1936,14 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-276
-277
-278</pre>
+280
+281
+282</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 276</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 280</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_software_name'>software_name</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_software_name'>software_name</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_const_get'>const_get</span><span class='lparen'>(</span><span class='symbol'>:SOFTWARE_NAME</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1975,7 +1994,34 @@ $(document).ready(function() {
   
 </div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Abstract PCR thermocycler</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Devin Strickland &lt;strcklnd@uw.edu&gt;</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 
 
 
@@ -2394,14 +2440,14 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-15
-16
-17</pre>
+19
+20
+21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 19</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='ivar'>@params</span> <span class='op'>=</span> <span class='id identifier rubyid_default_params'>default_params</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_user_defined_params'>user_defined_params</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2442,12 +2488,12 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-10
-11
-12</pre>
+14
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_params'>params</span>
   <span class='ivar'>@params</span>
@@ -2503,15 +2549,15 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-72
-73
-74</pre>
+76
+77
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 76</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_close_lid'>close_lid</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Click the &lt;b&gt;Close Lid&lt;/b&gt; button</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_close_lid'>close_lid</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Click the &lt;b&gt;Close Lid&lt;/b&gt; button</span><span class='tstring_end'>&#39;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2557,14 +2603,14 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-96
-97
-98</pre>
+100
+101
+102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 100</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_close_lid_image'>close_lid_image</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_close_lid_image'>close_lid_image</span>
   <span class='id identifier rubyid_image_path'>image_path</span><span class='lparen'>(</span><span class='label'>image_name:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:close_lid_image</span><span class='rbracket'>]</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2611,15 +2657,15 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-49
-50
-51</pre>
+53
+54
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 49</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 53</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_confirm_plate_orientation'>confirm_plate_orientation</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MAKE SURE THAT THE PLATE IS IN THE CORRECT ORIENTATION</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_confirm_plate_orientation'>confirm_plate_orientation</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MAKE SURE THAT THE PLATE IS IN THE CORRECT ORIENTATION</span><span class='tstring_end'>&#39;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2665,14 +2711,14 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-123
-124
-125</pre>
+127
+128
+129</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 127</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_model'>model</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_model'>model</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_const_get'>const_get</span><span class='lparen'>(</span><span class='symbol'>:MODEL</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2719,15 +2765,15 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-65
-66
-67</pre>
+69
+70
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 69</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_open_lid'>open_lid</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Click the &lt;b&gt;Open Lid&lt;/b&gt; button</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_open_lid'>open_lid</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Click the &lt;b&gt;Open Lid&lt;/b&gt; button</span><span class='tstring_end'>&#39;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2773,14 +2819,14 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-89
-90
-91</pre>
+93
+94
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 89</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 93</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_open_lid_image'>open_lid_image</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_open_lid_image'>open_lid_image</span>
   <span class='id identifier rubyid_image_path'>image_path</span><span class='lparen'>(</span><span class='label'>image_name:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:open_lid_image</span><span class='rbracket'>]</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2842,12 +2888,12 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-42
-43
-44</pre>
+46
+47
+48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_place_plate_in_instrument'>place_plate_in_instrument</span><span class='lparen'>(</span><span class='label'>plate:</span><span class='rparen'>)</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Place plate </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_plate'>plate</span><span class='embexpr_end'>}</span><span class='tstring_content'> in the thermocycler</span><span class='tstring_end'>&quot;</span></span>
@@ -2883,19 +2929,19 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-110
-111
-112
-113
 114
-115</pre>
+115
+116
+117
+118
+119</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 110</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 114</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_program_template_file'>program_template_file</span><span class='lparen'>(</span><span class='label'>program:</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_template_file'>template_file</span><span class='lparen'>(</span>
-    <span class='label'>template_name:</span> <span class='id identifier rubyid_program'>program</span><span class='period'>.</span><span class='id identifier rubyid_program_template_name'>program_template_name</span><span class='comma'>,</span> 
+    <span class='label'>template_name:</span> <span class='id identifier rubyid_program'>program</span><span class='period'>.</span><span class='id identifier rubyid_program_template_name'>program_template_name</span><span class='comma'>,</span>
     <span class='label'>extension:</span> <span class='symbol'>:PROGRAM_EXT</span>
   <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -2958,13 +3004,13 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-57
-58
-59
-60</pre>
+61
+62
+63
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_select_program_template'>select_program_template</span><span class='lparen'>(</span><span class='label'>program:</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='id identifier rubyid_program_template_file'>program_template_file</span><span class='lparen'>(</span><span class='label'>program:</span> <span class='id identifier rubyid_program'>program</span><span class='rparen'>)</span>
@@ -3014,15 +3060,15 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-79
-80
-81</pre>
+83
+84
+85</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 83</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_start_run'>start_run</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Click the &lt;b&gt;Start Run&lt;/b&gt; button</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_start_run'>start_run</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Click the &lt;b&gt;Start Run&lt;/b&gt; button</span><span class='tstring_end'>&#39;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3068,14 +3114,14 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-103
-104
-105</pre>
+107
+108
+109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 103</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 107</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_start_run_image'>start_run_image</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_start_run_image'>start_run_image</span>
   <span class='id identifier rubyid_image_path'>image_path</span><span class='lparen'>(</span><span class='label'>image_name:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:start_run_image</span><span class='rbracket'>]</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -3122,14 +3168,14 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-34
-35
-36</pre>
+38
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 38</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_turn_on'>turn_on</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_turn_on'>turn_on</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Turn on the </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_model'>model</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -3184,14 +3230,14 @@ $(document).ready(function() {
       <pre class="lines">
 
 
-23
-24
-25</pre>
+27
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'AbstractThermocycler.rb', line 27</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_user_defined_params'>user_defined_params</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_user_defined_params'>user_defined_params</span>
   <span class='lbrace'>{</span><span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
