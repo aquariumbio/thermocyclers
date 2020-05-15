@@ -1,41 +1,44 @@
+# frozen_string_literal: true
+
+needs 'Thermocyclers/AbstractThermocycler'
+
+# Class for handling BioRad CFX96 qPCR thermocycler
+#
+# @author Devin Strickland <strcklnd@uw.edu>
 # @author Eriberto Lopez <elopez3@uw.edu>
 # @note BioRad module originally deployed as `QPCR_ThermocyclerLib`
 #   on UW BIOFAB production 10/05/18
-
-needs "Thermocyclers/AbstractThermocycler"
-
 class BioRadCFX96 < AbstractThermocycler
-
   include QPCRMixIn
 
-  MODEL = "BioRad CFX96"
-  PROGRAM_EXT = ".prcl"
-  LAYOUT_EXT =  ".pltd"
-  SOFTWARE_NAME = "CFX Manager Software"
+  MODEL = 'BioRad CFX96'
+  PROGRAM_EXT = '.prcl'
+  LAYOUT_EXT =  '.pltd'
+  SOFTWARE_NAME = 'CFX Manager Software'
 
   # Instantiates the class
   #
   # @return [BioRadCFX96]
-  def initialize()
+  def initialize
     super()
   end
 
   # Lab-specific, user-defined parameters
   #
   # @return [Hash]
-  def user_defined_params()
+  def user_defined_params
     {
-      experiment_filepath: "Desktop/_qPCR_UWBIOFAB",
-      export_filepath: "Desktop/BIOFAB qPCR Exports",
-      image_path: "Actions/BioRad_qPCR_Thermocycler",
-      open_software_image: "open_biorad_thermo_workspace.JPG",
-      setup_workspace_image: "setup_workspace.JPG",
-      setup_program_image: "setting_up_qPCR_thermo_conditions.png",
-      setup_plate_layout_image: "setting_up_plate_layout_v1.png",
-      open_lid_image: "open_lid.png",
-      close_lid_image: "close_lid.png",
-      start_run_image: "start_run.png",
-      export_results_image: "exporting_qPCR_quantification.png"
+      experiment_filepath: 'Desktop/_qPCR_UWBIOFAB',
+      export_filepath: 'Desktop/BIOFAB qPCR Exports',
+      image_path: 'Actions/BioRad_qPCR_Thermocycler',
+      open_software_image: 'open_biorad_thermo_workspace.JPG',
+      setup_workspace_image: 'setup_workspace.JPG',
+      setup_program_image: 'setting_up_qPCR_thermo_conditions.png',
+      setup_plate_layout_image: 'setting_up_plate_layout_v1.png',
+      open_lid_image: 'open_lid.png',
+      close_lid_image: 'close_lid.png',
+      start_run_image: 'start_run.png',
+      export_results_image: 'exporting_qPCR_quantification.png'
     }
   end
 
@@ -46,15 +49,15 @@ class BioRadCFX96 < AbstractThermocycler
   # Instructions for turning on the thermocycler
   #
   # @return [String]
-  def turn_on()
-    "If the thermocycler is off, toggle the power switch in the back of the" \
-    " instrument"
+  def turn_on
+    'If the thermocycler is off, toggle the power switch in the back of the' \
+    ' instrument'
   end
 
   # Instructions for opening the software that controls the thermocycler
   #
   # @return [String]
-  def open_software()
+  def open_software
     "Open #{software_name}"
   end
 
@@ -98,29 +101,29 @@ class BioRadCFX96 < AbstractThermocycler
   # Instructions for confirming the orientation of a plate in the instrument
   #
   # @return [String]
-  def confirm_plate_orientation()
-    "MAKE SURE THAT THE PLATE IS IN THE CORRECT ORIENTATION"
+  def confirm_plate_orientation
+    'MAKE SURE THAT THE PLATE IS IN THE CORRECT ORIENTATION'
   end
 
   # Instructions for opening the lid
   #
   # @return [String]
-  def open_lid()
-    "Click the <b>Open Lid</b> button"
+  def open_lid
+    'Click the <b>Open Lid</b> button'
   end
 
   # Instructions for closing the lid
   #
   # @return [String]
-  def close_lid()
-    "Click the <b>Close Lid</b> button"
+  def close_lid
+    'Click the <b>Close Lid</b> button'
   end
 
   # Instructions for starting the run
   #
   # @return [String]
-  def start_run()
-    "Click the <b>Start Run</b> button"
+  def start_run
+    'Click the <b>Start Run</b> button'
   end
 
   # Instructions for saving an experiment file
@@ -134,10 +137,10 @@ class BioRadCFX96 < AbstractThermocycler
   # Instructions for exporting measurements from a qPCR run
   #
   # @return [String]
-  def export_measurements()
-    "Click <b>Export</b><br>" +
-    "Select <b>Export All Data Sheets</b><br>" +
-    "Export all sheets as CSV<br>" +
-    "Save files to the #{params[:export_filepath]} directory"
+  def export_measurements
+    'Click <b>Export</b><br>' \
+      'Select <b>Export All Data Sheets</b><br>' \
+      'Export all sheets as CSV<br>' \
+      "Save files to the #{params[:export_filepath]} directory"
   end
 end
