@@ -49,6 +49,7 @@ module ThermocyclerHelper
   def load_plate_and_start_run(thermocycler:, items: [], filename: nil)
     # Normalize the presentation of `items`
     items = [items] if items.respond_to?(:collection?)
+    plate = single_96well_plate?(items)
 
     show do
       title "Start Run on #{thermocycler.model} Thermocycler"
@@ -58,7 +59,7 @@ module ThermocyclerHelper
       separator
 
       # TODO: Make this work for plates, stripwells, and individual tubes
-      if single_96well_plate?(items)
+      if plate
         note thermocycler.place_plate_in_instrument(plate: items.first)
         warning thermocycler.confirm_plate_orientation
       else
