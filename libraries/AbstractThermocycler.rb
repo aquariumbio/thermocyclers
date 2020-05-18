@@ -101,6 +101,13 @@ class AbstractThermocycler
     image_path(image_name: params[:close_lid_image])
   end
 
+  # Image for selecting the PCR program template in the software
+  #
+  # @return [String]
+  def setup_program_image
+    image_path(image_name: params[:setup_program_image])
+  end
+
   # Image for starting the run
   #
   # @return [String]
@@ -131,18 +138,22 @@ class AbstractThermocycler
   private
 
   def default_params
-    {
+    params = {
       experiment_filepath: '',
       export_filepath: '',
       image_path: '',
-      open_software_image: 'open_software.png',
-      setup_workspace_image: 'setup_workspace.png',
       setup_program_image: 'setup_program.png',
-      setup_plate_layout_image: 'setup_plate_layout.png',
       open_lid_image: 'open_lid.png',
       close_lid_image: 'close_lid.png',
-      start_run_image: 'start_run.png',
-      export_results_image: 'export_results.png'
+      start_run_image: 'start_run.png'
+    }
+    params.update(default_qpcr_params)
+    params
+  end
+
+  def default_qpcr_params
+    {
+      # This space intentionally left blank
     }
   end
 
@@ -240,13 +251,6 @@ module QPCRMixIn
     image_path(image_name: params[:setup_workspace_image])
   end
 
-  # Image for selecting the PCR program template in the software
-  #
-  # @return [String]
-  def setup_program_image
-    image_path(image_name: params[:setup_program_image])
-  end
-
   # Image for selecting the plate layout template in the software
   #
   # @return [String]
@@ -279,5 +283,16 @@ module QPCRMixIn
   # @return [String]
   def software_name
     self.class.const_get(:SOFTWARE_NAME)
+  end
+
+  private
+
+  def default_qpcr_params
+    {
+      open_software_image: 'open_software.png',
+      setup_workspace_image: 'setup_workspace.png',
+      setup_plate_layout_image: 'setup_plate_layout.png',
+      export_results_image: 'export_results.png'
+    }
   end
 end
