@@ -100,4 +100,6 @@ class MiniPCRMini16 < AbstractThermocycler
       'The run will automatically begin, signaled by the green LED turning on'
     ])
   end
+
+  def setup_program_image; end
 end
