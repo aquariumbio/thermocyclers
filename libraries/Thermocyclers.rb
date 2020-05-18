@@ -24,20 +24,30 @@ module ThermocyclerHelper
     show do
       title "Set Up #{thermocycler.model} Thermocycler"
 
-      note thermocycler.open_software
-      image thermocycler.open_software_image
-      separator
+      if thermocycler.respond_to?(:open_software)
+        note thermocycler.open_software
+        image thermocycler.open_software_image
+        separator
+      end
 
-      note thermocycler.set_dye(composition: composition)
-      image thermocycler.setup_workspace_image
-      separator
+      if thermocycler.respond_to?(:set_dye)
+        note thermocycler.set_dye(composition: composition)
+        separator
+      end
+
+      if thermocycler.respond_to?(:setup_workspace_image)
+        image thermocycler.setup_workspace_image
+        separator
+      end
 
       note thermocycler.select_program_template(program: program)
       image thermocycler.setup_program_image
       separator
 
-      note thermocycler.select_layout_template(program: program)
-      image thermocycler.setup_plate_layout_image
+      if thermocycler.respond_to?(:set_dye)
+        note thermocycler.select_layout_template(program: program)
+        image thermocycler.setup_plate_layout_image
+      end
     end
   end
 
@@ -78,10 +88,12 @@ module ThermocyclerHelper
     end
   end
 
-  # Export the measurements, if a qPCR run
+  # Export the measurements, if a qPCR thermocycler
   #
   # @param thermocycler [Thermocycler]
   def export_measurements(thermocycler:)
+    return unless thermocycler.respond_to?(:export_measurements)
+
     show do
       title 'Export Measurements'
 
