@@ -44,7 +44,7 @@ class Protocol
     end
 
     thermocycler = ThermocyclerFactory.build(
-      model: MiniPCRMini16::MODEL
+      model: TestThermocycler::MODEL
     )
 
     if thermocycler.respond_to?(:set_dye)
@@ -62,7 +62,8 @@ class Protocol
       set_up_program(
         thermocycler: thermocycler,
         program: program,
-        composition: composition
+        composition: composition,
+        qpcr: true
       )
 
       export_measurements(thermocycler: thermocycler)
@@ -70,7 +71,7 @@ class Protocol
 
     load_plate_and_start_run(
       thermocycler: thermocycler,
-      filename: 'test_filename'
+      experiment_filename: 'test_filename'
     )
 
     {}
