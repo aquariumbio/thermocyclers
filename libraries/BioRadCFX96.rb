@@ -38,7 +38,7 @@ class BioRadCFX96 < AbstractThermocycler
       open_lid_image: 'open_lid.png',
       close_lid_image: 'close_lid.png',
       start_run_image: 'start_run.png',
-      export_results_image: 'exporting_qPCR_quantification.png'
+      export_measurements_image: 'exporting_qPCR_quantification.png'
     }
   end
 
