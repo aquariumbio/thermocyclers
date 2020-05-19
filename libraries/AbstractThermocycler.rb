@@ -261,8 +261,8 @@ module QPCRMixIn
   # Image for exporting measurements from a qPCR run
   #
   # @return [String]
-  def export_results_image
-    image_path(image_name: params[:export_results_image])
+  def export_measurements_image
+    image_path(image_name: params[:export_measurements_image])
   end
 
   ########## Template File Methods
@@ -292,7 +292,7 @@ module QPCRMixIn
       open_software_image: 'open_software.png',
       setup_workspace_image: 'setup_workspace.png',
       setup_plate_layout_image: 'setup_plate_layout.png',
-      export_results_image: 'export_results.png'
+      export_measurements_image: 'export_measurements.png'
     }
   end
 end
