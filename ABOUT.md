@@ -1,6 +1,6 @@
 # Aquarium Thermocycler Models, version 0.1.2
 
-Models for standardizing usage of thermocyclers [[Download](aq-thermocyclers.aq)] [[Github Repo](https://github.com/klavinslab/aq-thermocyclers)]
+Models for standardizing usage of thermocyclers [[Download](thermocyclers.aq)] [[Github Repo](https://github.com/aquariumbio/thermocyclers)]
 
 &copy; University of Washington
 
