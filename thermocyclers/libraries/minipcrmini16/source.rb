@@ -27,7 +27,8 @@ class MiniPCRMini16 < AbstractThermocycler
     {
       experiment_filepath: 'Desktop/my_experiment_path',
       export_filepath: 'Desktop/my_export_path',
-      image_path: 'Actions/MiniPCRMini16'
+      image_path: 'Actions/MiniPCRMini16',
+      dimensions: [2,8]
     }
   end
 

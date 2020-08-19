@@ -28,7 +28,8 @@ class TestThermocycler < AbstractThermocycler
     {
       experiment_filepath: 'Desktop/test_experiment_path',
       export_filepath: 'Desktop/test_export_path',
-      image_path: 'Actions/TestThermocycler'
+      image_path: 'Actions/TestThermocycler',
+      dimensions: [8,12]
     }
   end
 
