@@ -1,5 +1,4 @@
 {
-  "id": 7,
   "name": "Run qPCR",
   "parent_class": "OperationType",
   "category": "Thermocyclers",

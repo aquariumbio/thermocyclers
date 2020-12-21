@@ -29,27 +29,17 @@ module ThermocyclerHelper
   #   qPCR experiment: `open_software`, `set_dye`, `select_layout_template`,...
   # @return [void]
   def set_up_program(thermocycler:, program:, qpcr: false)
-    show do
-      title "Set Up #{thermocycler.model} Thermocycler"
-
+    show_block = []
       if qpcr
-        note thermocycler.open_software
-        image thermocycler.open_software_image
-        separator
-
-        image thermocycler.setup_workspace_image
-        separator
+        show_block.append(thermocycler.open_software)
       end
 
-      note thermocycler.select_program_template(program: program)
-      image thermocycler.setup_program_image
-      separator
+      show_block.append(thermocycler.select_program_template(program: program))
 
       if qpcr
-        note thermocycler.select_layout_template(program: program)
-        image thermocycler.setup_plate_layout_image
+        show_block.append(thermocycler.select_layout_template(program: program))
       end
-    end
+    show_block
   end
 
   # Steps for loading physical tubes or plates into a thermocycler
@@ -59,51 +49,48 @@ module ThermocyclerHelper
   # @param filename [String] the filename to safe the experiment file
   # @return [void]
   def load_plate_and_start_run(thermocycler:, items: [],
-                               experiment_filename: nil)
+                               experiment_filename: nil,
+                               expert: false)
+    show_block = []
     # Normalize the presentation of `items`
     items = [items] if items.respond_to?(:collection?)
-    plate = single_96well_plate?(items)
+    plate = items.all?{ |item| is_plate?(item) }
 
-    show do
-      title "Start Run on #{thermocycler.model} Thermocycler"
+    show_block.append(thermocycler.open_lid) unless expert
 
-      note thermocycler.open_lid
-      image thermocycler.open_lid_image
-      separator
-
-      # TODO: Make this work for plates, stripwells, and individual tubes
-      if plate
-        note thermocycler.place_plate_in_instrument(plate: items.first)
-        warning thermocycler.confirm_plate_orientation
-      else
-        # TODO handle stripwells and other formats here (utilize TubeRack)
-        note 'Load the PCR tubes into the metal block'
+    # TODO: Make this work for plates, stripwells, and individual tubes
+    if plate
+      items.each do |item|
+        show_block.append(thermocycler.place_plate_in_instrument(plate: item))
       end
-      separator
-
-      note thermocycler.close_lid
-      image thermocycler.close_lid_image
-      separator
-
-      note thermocycler.start_run
-      if experiment_filename.present?
-        note thermocycler.save_experiment_file(filename: experiment_filename)
-      end
+      show_block.append("<b>#{thermocycler.confirm_plate_orientation}</b>") unless expert
+    else
+      # TODO handle stripwells and other formats here (utilize TubeRack)
+      show_block.append('Load the PCR tubes into the metal block')
     end
+
+    show_block.append(thermocycler.close_lid) unless expert
+
+    show_block.append(thermocycler.start_run)
+    if experiment_filename.present?
+      show_block.append(thermocycler.save_experiment_file(filename: experiment_filename))
+    end
+    show_block
   end
+
+  # Plate mapping from Mark
+  # Add the GC STS to experiment request to the experimental schedule.
 
   # Export the measurements, if a qPCR thermocycler
   #
   # @param thermocycler [Thermocycler]
   # @return [void]
   def export_measurements(thermocycler:)
-    show do
-      title 'Export Measurements'
-
-      note 'Once the run has finished, export the measurements'
-      note thermocycler.export_measurements
-      image thermocycler.export_measurements_image
-    end
+    show_block = []
+    show_block.append('Once the run has finished, export the measurements')
+    show_block.append(thermocycler.export_measurements)
+    show_block.append(thermocycler.export_measurements_image)
+    show_block
   end
 
   # TODO: A method from Eriberto Lopez's code that I haven't implemented yet
@@ -120,20 +107,16 @@ module ThermocyclerHelper
 
   private
 
-  # Test whether an array of items is a single 96 well plate
-  #
-  # @param items [Array<Item>]
-  # @return [Boolean]
-  def single_96well_plate?(items)
-    items.length == 1 && is_96well_plate?(items.first)
-  end
-
   # Test whether an item is a 96 well plate
   #
   # @param item [Item]
   # @return [Boolean]
-  def is_96well_plate?(item)
-    item.collection? && item.capacity == 96
+  def is_plate?(item)
+    if item.collection?
+      item.capacity == 96 || item.capacity == 384
+    else
+      false
+    end
   end
 end
 
