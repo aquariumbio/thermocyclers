@@ -13,11 +13,11 @@ class MiniPCRMini16 < AbstractThermocycler
   # CONSTANTS that really shouldn't ever change
   MODEL = 'miniPCR mini16'
 
-  # Instantiates the class
+   # Instantiates the class
   #
-  # @return [ThermocyclerTemplate]
-  def initialize
-    super()
+  # @return [TestThermocycler]
+  def initialize(name: 'Unnamed Thermocycler')
+    super(name: name)
   end
 
   # Lab-specific, user-defined parameters
@@ -27,7 +27,8 @@ class MiniPCRMini16 < AbstractThermocycler
     {
       experiment_filepath: 'Desktop/my_experiment_path',
       export_filepath: 'Desktop/my_export_path',
-      image_path: 'Actions/MiniPCRMini16'
+      image_path: 'Actions/MiniPCRMini16',
+      dimensions: [2, 8]
     }
   end
 
