@@ -66,7 +66,6 @@ module ThermocyclerHelper
 
       note thermocycler.open_lid
       image thermocycler.open_lid_image
-      separator
 
       # TODO: Make this work for plates, stripwells, and individual tubes
       if plate

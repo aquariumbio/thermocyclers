@@ -26,7 +26,8 @@ class ThermocyclerTemplate < AbstractThermocycler
     {
       experiment_filepath: 'Desktop/my_experiment_path',
       export_filepath: 'Desktop/my_export_path',
-      image_path: 'Actions/ThermocyclerTemplate'
+      image_path: 'Actions/ThermocyclerTemplate',
+      dimensions: nil
     }
   end
 
