@@ -1,5 +1,7 @@
 # Aquarium Thermocyclers Models
 
+**WARNING: This repo has been merged into [protocol-base](https://github.com/aquariumbio/protocol-base) and future updates will happen there. Please consider using that repo instead.**
+
 ## About this repository 
 This repository contains two sets of files:
 - One, with files located in `thermocyclers` and `test`, is managed by [pfish](https://github.com/klavinslab/pfish).
